@@ -11,14 +11,14 @@ var database = new Dbset(config)
 
 database.connect()
 
-// database.select({
-//     table: "list",
-//     condition: {
-//         name: "姜佐腾"
-//     }
-// }, function (data) {
-//     console.log(data)
-// })
+database.select({
+    table: "list",
+    condition: {
+        name: "姜佐腾"
+    }
+}, function (data) {
+    console.log(data)
+})
 
 // database.delete({
 //     table: "list",
@@ -26,6 +26,7 @@ database.connect()
 //         id: 190
 //     }
 // })
+
 database.insert({
     table: "list",
     value: {
@@ -41,6 +42,7 @@ database.insert({
         type: 1
     }
 })
+
 // database.list()
 
 // database.disconnect()
